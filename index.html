@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RyDev Portfolio | Personal & Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-drift': 'float-drift 12s ease-in-out infinite',
+              'float-rotate-3d': 'float-rotate-3d 10s ease-in-out infinite',
+              'bounce-soft': 'bounce-soft 4s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s infinite linear',
+              'subtle-bounce': 'subtle-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+              'orbital': 'orbital 20s linear infinite',
+              'screen-flicker': 'screen-flicker 4s ease-in-out infinite',
+              'hologram-pulse': 'hologram-pulse 2s ease-in-out infinite',
+              'code-scroll': 'code-scroll 15s linear infinite',
+              'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'float-rotate-3d': {
+                '0%, 100%': { transform: 'translateY(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+                '33%': { transform: 'translateY(-15px) rotateX(10deg) rotateY(5deg) rotateZ(2deg)' },
+                '66%': { transform: 'translateY(10px) rotateX(-5deg) rotateY(-10deg) rotateZ(-2deg)' },
+              },
+              'float-drift': {
+                '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                '33%': { transform: 'translate(25px, -35px) rotate(10deg)' },
+                '66%': { transform: 'translate(-20px, -15px) rotate(-10deg)' },
+              },
+              'bounce-soft': {
+                '0%, 100%': { transform: 'translateY(0) scale(1)', filter: 'drop-shadow(0 5px 15px rgba(99, 102, 241, 0.1))' },
+                '50%': { transform: 'translateY(-15px) scale(1.05)', filter: 'drop-shadow(0 20px 25px rgba(99, 102, 241, 0.2))' },
+              },
+              'screen-flicker': {
+                '0%, 100%': { opacity: 1 },
+                '50%': { opacity: 0.85 },
+                '51%': { opacity: 0.95 },
+                '52%': { opacity: 0.8 },
+              },
+              'glow-pulse': {
+                '0%, 100%': { opacity: 0.4, transform: 'scale(1)' },
+                '50%': { opacity: 0.8, transform: 'scale(1.05)' },
+              },
+              'code-scroll': {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' },
+              },
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              },
+              'subtle-bounce': {
+                '0%': { transform: 'scale(0.8)', opacity: '0' },
+                '60%': { transform: 'scale(1.1)', opacity: '1' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-light: #f8fafc;
+        --bg-dark: #020617;
+        --text-light: #0f172a;
+        --text-dark: #f8fafc;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        background-color: var(--bg-light);
+        color: var(--text-light);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      html.dark body {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
+
+      .glass {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: all 0.3s ease;
+      }
+
+      html.dark .glass {
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .perspective-2000 {
+        perspective: 2000px;
+      }
+
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+
+      .tilt-card {
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-style: preserve-3d;
+      }
+
+      /* Infinite Loop Helper for Code Scroll */
+      .code-scroller {
+        mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
