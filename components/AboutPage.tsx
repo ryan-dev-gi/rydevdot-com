@@ -52,16 +52,16 @@ const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => {
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-4 space-y-6">
-            <div className="glass rounded-[3rem] border border-slate-200 dark:border-indigo-500/20 p-8 shadow-2xl overflow-hidden relative">
+            <div className="glass rounded-[3rem] border border-slate-200 dark:border-indigo-500/20 p-8 shadow-2xl overflow-hidden relative group">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-indigo-600" />
               
-              <div className="relative aspect-square rounded-[2rem] overflow-hidden mb-6 border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+              <div className="relative aspect-square rounded-[2rem] overflow-hidden mb-6 border-2 border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 shadow-lg">
                 <img 
                   src={PERSONAL_INFO.avatar} 
                   alt={PERSONAL_INFO.name} 
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6">
                   <h3 className="text-white text-3xl font-black tracking-tight">{PERSONAL_INFO.name}</h3>
                   <span className="text-indigo-400 text-xs font-bold uppercase tracking-widest">{PERSONAL_INFO.title}</span>
                 </div>
@@ -88,13 +88,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => {
                   { Icon: Instagram, href: "https://www.instagram.com/prmo.ry/" },
                   { Icon: Github, href: "https://github.com/ryan-dev-gi" }
                 ].map((item, idx) => (
-                  <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:border-indigo-500/50 transition-all">
+                  <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:border-indigo-500/50 transition-all hover:scale-110">
                     <item.Icon size={20} />
                   </a>
                 ))}
               </div>
 
-              <button className="w-full py-4 rounded-2xl bg-indigo-600 text-white font-bold flex items-center justify-center space-x-2 shadow-lg shadow-indigo-600/20 hover:scale-105 transition-all">
+              <button className="w-full py-4 rounded-2xl bg-indigo-600 text-white font-bold flex items-center justify-center space-x-2 shadow-lg shadow-indigo-600/20 hover:scale-[1.02] transition-all">
                 <span>LET'S COLLABORATE</span>
                 <Send size={16} />
               </button>
