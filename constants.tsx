@@ -76,7 +76,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'CEO',
     company: 'Skyline Ventures',
     content: 'Working with this team was a game-changer for our brand identity. Professional, creative, and fast.',
-    avatar: 'https://picsum.photos/seed/marcus/100/100'
+    avatar: '/profile.png'
   }
 ];
 
