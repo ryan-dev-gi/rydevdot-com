@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     title: 'MediCare',
     description: 'A comprehensive healthcare management system designed for patient records, automated appointment scheduling, and secure telemedicine consultations.',
     category: 'Healthcare / SaaS',
-    image: 'https://images.unsplash.com/photo-1504813184591-01592fd03cf7?auto=format&fit=crop&q=80&w=800&h=600',
+    image: '/midcare.PNG',
     link: 'https://medicare-neon-seven.vercel.app/',
     github: 'https://github.com/ryan-dev-gi/medicare',
     tags: ['React', 'Firebase', 'Tailwind CSS']
