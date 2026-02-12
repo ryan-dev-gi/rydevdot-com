@@ -9,22 +9,25 @@ interface AboutProps {
 
 export default function About({ onShowMore }: AboutProps) {
   return (
-    <section id="about" className="py-24 bg-white dark:bg-slate-900/30 transition-colors duration-500">
+    <section id="about" className="py-24 bg-white dark:bg-slate-900/30 transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="relative fade-in">
-            <div className="aspect-square rounded-[3rem] overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 shadow-inner group">
-              <img 
-                src={PERSONAL_INFO.avatar} 
-                alt="Portrait" 
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800&h=800";
-                }}
-                className="w-full h-full object-cover rounded-[2.5rem] grayscale group-hover:grayscale-0 transition-all duration-700"
-              />
+            {/* 3D Floating Effect Container */}
+            <div className="relative animate-float-rotate-3d">
+              <div className="aspect-square rounded-[3.5rem] overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(99,102,241,0.1)] group transition-all duration-500 hover:border-indigo-500/50">
+                <img 
+                  src={PERSONAL_INFO.avatar} 
+                  alt="Cerda Ryan Portrait" 
+                  className="w-full h-full object-cover rounded-[3rem] grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              
+              {/* Backglow */}
+              <div className="absolute -inset-4 bg-indigo-500/10 blur-[80px] -z-10 rounded-full animate-glow-pulse" />
             </div>
-            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-[2rem] border border-slate-200 dark:border-indigo-500/20 shadow-xl dark:shadow-2xl transition-all">
+
+            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-[2rem] border border-slate-200 dark:border-indigo-500/20 shadow-xl dark:shadow-2xl transition-all hover:scale-105">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-lg">
                   <GraduationCap size={20} />
