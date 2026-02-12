@@ -67,7 +67,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Product Lead',
     company: 'NextGen Systems',
     content: 'The attention to detail and ability to translate complex requirements into elegant solutions is truly remarkable.',
-    avatar: 'https://picsum.photos/seed/sarah/100/100'
+    avatar: '/Profile.png'
   },
   {
     id: 't2',
@@ -75,7 +75,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'CEO',
     company: 'Skyline Ventures',
     content: 'Working with this team was a game-changer for our brand identity. Professional, creative, and fast.',
-    avatar: 'https://picsum.photos/seed/marcus/100/100'
+    avatar: '/Profile.png'
   }
 ];
 
@@ -89,6 +89,6 @@ export const PERSONAL_INFO = {
   age: "24-year-old",
   dob: "August 11, 2001",
   birthplace: "Pambujan",
-  avatar: "Public/Profile.png",
+  avatar: "/Profile.png",
   skills: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "UI Design"]
 };
