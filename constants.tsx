@@ -68,7 +68,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Product Lead',
     company: 'NextGen Systems',
     content: 'The attention to detail and ability to translate complex requirements into elegant solutions is truly remarkable.',
-    avatar: '/profile.png'
+    avatar: '/Profile.png'
   },
   {
     id: 't2',
