@@ -67,7 +67,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Product Lead',
     company: 'NextGen Systems',
     content: 'The attention to detail and ability to translate complex requirements into elegant solutions is truly remarkable.',
-    avatar: '/Profile.png'
+    avatar: '/download.jpg'
   },
   {
     id: 't2',
@@ -75,7 +75,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'CEO',
     company: 'Skyline Ventures',
     content: 'Working with this team was a game-changer for our brand identity. Professional, creative, and fast.',
-    avatar: '/Profile.png'
+    avatar: '/image.png'
   }
 ];
 
