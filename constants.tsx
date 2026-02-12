@@ -89,6 +89,6 @@ export const PERSONAL_INFO = {
   age: "24-year-old",
   dob: "August 11, 2001",
   birthplace: "Pambujan",
-  avatar: "/Profile.png",
+  avatar: "Public/Profile.png",
   skills: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "UI Design"]
 };
